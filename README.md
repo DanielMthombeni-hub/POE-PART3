@@ -12,6 +12,6 @@ The project revealed significant improvements in vehicle appearance and conditio
 ## Conclusion
 This POE demonstrated the importance of automotive detailing in maintaining and restoring vehicles. Key takeaways include the importance of proper inspection and assessment, the effectiveness of various detailing tools and techniques, and the value of customer satisfaction.
 
-## References
+
 
 
