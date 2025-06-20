@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DFU Detailing</title>
+  <link rel="stylesheet" href="part 2 css.css">
+</head>
+<body align="center">
+  <header>
+    <nav class="navbar">
+      <div class="logo">DFU Car Detailing</div>
+      <ul class="nav-links">
+        <li><a href="FRSH.html">Home</a></li>
+        <li><a href="About us.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Meet the team.html">Team</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="sign up.html" class="btn">Sign Up</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-section">
+      <h1 class="section-title">Contact Us</h1>
+      <p><b>Landline:082 409 5216/068 854 4860<br>
+            Email:DFUDETAILERS@gmail.com<br>
+            Address:10439 kawa street midrand</b></p>
+      <p>Use the form below to send us a message or find your location.</p>
+
+      <div class="location-box">
+        <p id="location"><i>Detecting your location...</i></p>
+      </div>
+
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DFU Car Detailing. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Inline location script
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+          document.getElementById("location").textContent =
+            `Your location: Latitude ${lat.toFixed(4)}, Longitude ${lon.toFixed(4)}`;
+        },
+        function(error) {
+          document.getElementById("location").textContent = "Location access denied or unavailable.";
+        }
+      );
+    } else {
+      document.getElementById("location").textContent = "Geolocation not supported by your browser.";
+    }
+  </script>
+</body>
+</html>
